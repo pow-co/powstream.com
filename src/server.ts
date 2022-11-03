@@ -65,6 +65,22 @@ server.route({
     }
   }
 })
+server.route({
+  method: 'GET',
+  path: '/api/v1/youtube/videos/{video_id}',
+  handler: handlers.YoutubeVideos.show,
+  options: {
+    description: 'Get Video Metadata From Blockchain',
+    tags: ['api', 'system'],
+    response: {
+      failAction: 'log',
+      schema: Joi.object({
+        status: Joi.string().valid('OK', 'ERROR').required(),
+        error: Joi.string().optional()
+      }).label('ServerStatus')
+    }
+  }
+})
 
 var started = false
 
