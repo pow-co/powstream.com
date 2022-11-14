@@ -12,14 +12,14 @@ async function run() {
     try {
 
       const result = await boostpow({
-        content: '40016a773534c48ace5abc87158256f2e2bb13f0dc2b7ae22d76e0d964042396',
+        content: '62acd43fd07cc382f69c20e2de6485d5eca9759d916563e4518d29303337b8f8',
         difficulty: 0.01,
-        satoshis: 1000
+        satoshis: 100000
       })
 
       console.log({ result })
 
-      await delay(15_000)
+      await delay(2500)
 
       const miner = new Miner({
 
