@@ -1,0 +1,37 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "scp": "scp -r dist/* root@powstream.com:/var/www/powstream.com"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.9.3",
+    "axios": "^0.27.2",
+    "boostpow-button": "^0.0.6",
+    "bsv": "^1.5.6",
+    "delay": "^5.0.0",
+    "notistack": "^2.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-player": "^2.10.1",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "stag-relayx": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "sass": "^1.55.0",
+    "vite": "^3.0.7"
+  }
+}
