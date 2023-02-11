@@ -14,7 +14,7 @@ import './VideoCard.scss';
 import toast from 'react-hot-toast';
 
 //import BoostpowButton from 'boostpow-button'
-import BoostpowButton from '/Users/zyler/github/pow-co/boostpow-button'
+import BoostpowButton from "boostpow-button"
 
 const VideoCard = ({ video }) => {
 

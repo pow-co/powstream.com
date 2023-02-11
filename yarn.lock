@@ -704,9 +704,9 @@
   "resolved" "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   "version" "2.0.4"
 
-"@napi-rs/snappy-darwin-x64@7.1.1":
-  "integrity" "sha512-X1D2F67bQkPwr5iSR29/RnOrLwAkB55YO6t41toABzla3mflLDpzZcakz6FokIukykf7ey31/t73v/4pbgaBkg=="
-  "resolved" "https://registry.npmjs.org/@napi-rs/snappy-darwin-x64/-/snappy-darwin-x64-7.1.1.tgz"
+"@napi-rs/snappy-darwin-arm64@7.1.1":
+  "integrity" "sha512-3LZyoAw3Qa5F7sCCTkSkhmGlydwUKU6L3Jl46eKHO2Ctm8Gcjxww6T7MfwlwGZ6JqAM6d1d++WLzUZPCGXVmag=="
+  "resolved" "https://registry.npmjs.org/@napi-rs/snappy-darwin-arm64/-/snappy-darwin-arm64-7.1.1.tgz"
   "version" "7.1.1"
 
 "@nodelib/fs.scandir@2.1.5":
