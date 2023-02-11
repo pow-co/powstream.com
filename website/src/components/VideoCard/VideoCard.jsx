@@ -14,36 +14,44 @@ import './VideoCard.scss';
 import toast from 'react-hot-toast';
 
 //import BoostpowButton from 'boostpow-button'
-import BoostpowButton from "boostpow-button"
+import { BoostButton } from "myboostpow-lib"
 
 const VideoCard = ({ video }) => {
 
 	const { videoId, author, difficulty } = video
 
-	async function onBoostpowClick(boostpowPromise) {
-
-		console.log('boostpow clicked', boostpowPromise)
-
-		toast.promise(boostpowPromise, {
-			loading: 'Boosting Video with $0.05 of Energy',
-			success: 'Boost Proof of Work Ordered',
-			error: 'Error Ordering Boost',
-		})
-	}
-
-	function onBoostpowSuccess(result) {
-
-		console.log('boostpow success', result)
-
-		//toast.success('Boost Proof of Work Ordered')
-	}
-
-	function onBoostpowError(error) {
-
-		toast.error('Error Ordering Boost Proof of Work')
-
-		
-	}
+	const handleBoostLoading = () => {
+        toast('Publishing Your Boost Job to the Network', {
+            icon: '⛏️',
+            style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+            },
+          });
+      };
+    
+      const handleBoostSuccess = () => {
+        toast('Success!', {
+            icon: '✅',
+            style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+            },
+          });
+      };
+    
+      const handleBoostError = () => {
+        toast('Error!', {
+            icon: '🐛',
+            style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+            },
+        });
+      };
 
 	return <Card
 		sx={{
@@ -65,13 +73,14 @@ const VideoCard = ({ video }) => {
 
 		{video.txid && (
 				<Box sx={{float: 'right'}}>
-					<BoostpowButton
-						onClick={onBoostpowClick}
-						onSuccess={onBoostpowSuccess}
-						onError={onBoostpowError}
-						currency={'USD'}
-						value={0.05}
+					<BoostButton 
 						content={video.txid}
+						difficulty={difficulty}
+						theme="dark"
+						showDifficulty={false}
+						onSending={handleBoostLoading}
+						onError={handleBoostError}
+						onSuccess={handleBoostSuccess}
 					/>
 				</Box>
 			)}
